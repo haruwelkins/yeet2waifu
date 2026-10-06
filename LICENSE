@@ -1,0 +1,40 @@
+yeet2waifu
+Copyright (c) 2026 Haru (@haru717171x, https://github.com/haruwelkins). All rights reserved.
+
+This is NOT open source software. The source code is public so anyone can see how the game works, not so it can
+be reused. Everything in this repository (code, art, sprites, levels, sounds, text and design), except the third
+party parts listed in section 3, belongs to the copyright holder.
+
+1. WHAT YOU CAN DO, FOR FREE
+   a. Play yeet2waifu on your streams and in your videos, including monetized ones, by running it from the
+      official site in a browser or as an OBS Browser Source: https://haruwelkins.github.io/yeet2waifu/
+   b. Record, clip and share footage of the game, as long as the in game credit ("yeet2waifu by:@haru717171x")
+      stays visible and unaltered.
+   c. Draw your own waifus in the editor and share their waifu codes. The waifus you draw are yours.
+   d. Share links to the official site.
+
+2. WHAT YOU CANNOT DO WITHOUT WRITTEN PERMISSION FROM THE COPYRIGHT HOLDER
+   a. Copy, reuse, modify, translate, adapt, decompile or make derivative works of the code, art, sprites,
+      levels, sounds, text or design, in whole or in part.
+   b. Host, mirror, re-upload, embed in another website, or distribute the game or any part of it anywhere other
+      than the official site.
+   c. Remove, hide, cover or change the credit, this copyright notice or this license.
+   d. Sell, rent, sublicense, or include the game or any part of it in another product or service, paid or free.
+   e. Use any part of this repository to train, fine tune or evaluate machine learning or AI models, or as
+      material for tools that generate code, art or games.
+   f. Present the game, or anything made from it, as your own work.
+
+3. THIRD PARTY PARTS
+   These keep their own licenses, and nothing here limits your rights under them for those parts:
+   * planck.js, MIT License (vendor/LICENSE-planck.txt)
+   * the fonts Press Start 2P, Silkscreen, Tiny5 and Fredoka, SIL Open Font License (vendor/fonts/OFL-*.txt)
+   * the ENDESGA 32 palette, by Endesga
+
+4. NO WARRANTY
+   The game is provided "as is", without warranty of any kind. In no event shall the copyright holder be liable
+   for any claim, damages or other liability arising from the use of the game.
+
+5. TERMINATION
+   If you break these terms, your permission to use the game ends automatically and immediately.
+
+For permissions, collaborations or licensing, contact @haru717171x on X.

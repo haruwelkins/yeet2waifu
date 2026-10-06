@@ -1,0 +1,153 @@
+// yeet2waifu © 2026 Haru (@haru717171x). All rights reserved. Free to play on stream; see LICENSE.
+// Theme "plains": the classic side-scrolling platformer meadow: grass and dirt, floating bricks, golden
+// heart blocks, green pipes, round hills, puffy clouds. A genre homage drawn from scratch: no sprite here is
+// traced or copied from any game.
+import { sprite } from './raster.js';
+
+const DIRT = { T: 'tan', B: 'brown', K: 'bark', C: 'clay' };
+
+export const grassTop = sprite({ L: 'lime', G: 'green', F: 'forest', ...DIRT }, `
+LLLLLLLLLLLLLLLL
+LGLLLLLLGLLLLLGL
+GGGGLGGGGGLGGGGG
+GGFGGGGGFGGGGFGG
+FGFFGGFFFGFGFFGF
+TFTFFTFTTFFTFTFT
+TTTTTTTTTTTTTTTT
+TTTTTTBTTTTTTTTT
+TTBTTTTTTTTTBBTT
+TTTTTTTTKTTTTTTT
+TTTTTTTTTTTTTTTT
+TTTTBBTTTTTTTTTT
+TTTTTTTTTTTBTTTT
+TKTTTTTTTTTTTTTT
+TTTTTTTTTBTTTTTT
+TTTTTTTTTTTTTTTT
+`);
+
+export const dirt = sprite(DIRT, `
+TTTTTTTTTTTTTTTT
+TTBTTTTTTTTTBBTT
+TTTTTTTTKTTTTTTT
+TTTTTTTTTTTTTTTT
+TTTTBBTTTTTTTTTT
+TTTTTTTTTTTBTTTT
+TKTTTTTTTTTTTTTT
+TTTTTTTTTBTTTTTT
+TTTTTTTTTTTTTTTT
+TTTBTTTTTTTTKTTT
+TTTTTTTTTTTTTTTT
+TTTTTTTBBTTTTTTT
+TTTTTTTTTTTTTTTT
+TTKTTTTTTTTTTBTT
+TTTTTTTTTTTTTTTT
+TTTTTBTTTTTTTTTT
+`);
+
+export const brick = sprite({ C: 'clay', R: 'rust', K: 'bark', P: 'plum' }, `
+CCCCCCCKCCCCCCCK
+RRRRRRRKCRRRRRRK
+RRRRRRRKCRRRRRRK
+KKKKKKKKKKKKKKKK
+CCCKCCCCCCCKCCCC
+RRRKCRRRRRRKCRRR
+RRRKCRRRRRRKCRRR
+KKKKKKKKKKKKKKKK
+CCCCCCCKCCCCCCCK
+RRRRRRRKCRRRRRRK
+RRRRRRRKCRRRRRRK
+KKKKKKKKKKKKKKKK
+CCCKCCCCCCCKCCCC
+RRRKCRRRRRRKCRRR
+RRRKCRRRRRRKCRRR
+PPPPPPPPPPPPPPPP
+`);
+
+export const heartBlock = sprite({ K: 'bark', Y: 'yellow', A: 'amber', O: 'orange', W: 'white', R: 'hot', D: 'crimson' }, `
+KKKKKKKKKKKKKKKK
+KYYYYYYYYYYYYYYK
+KYAAAAAAAAAAAAOK
+KYAWAAAAAAAAWAOK
+KYAAARRAARRAAAOK
+KYAARRRRRRDRAAOK
+KYAARRRRRRDRAAOK
+KYAAARRRRDRAAAOK
+KYAAAARRRRAAAAOK
+KYAAAAARRAAAAAOK
+KYAAAAAAAAAAAAOK
+KYAWAAAAAAAAWAOK
+KYAAAAAAAAAAAAOK
+KYOOOOOOOOOOOOOK
+KOOOOOOOOOOOOOOK
+KKKKKKKKKKKKKKKK
+`);
+
+export const stone = sprite({ S: 'silver', G: 'gray', L: 'slate', K: 'steel' }, `
+SSSSSSSSSSSSSSSK
+SGGGGGGGGGGGGGLK
+SGGGGGGGGGGGGGLK
+SGGSGGGGGGGGGGLK
+SGGGGGGGGGGGGGLK
+SGGGGGGGGGGLGGLK
+SGGGGGGGGGGGGGLK
+SGGGGGGGGGGGGGLK
+SGGGGGLGGGGGGGLK
+SGGGGGGGGGGGGGLK
+SGGGGGGGGGGGGGLK
+SGSGGGGGGGGGGGLK
+SGGGGGGGGGGGGGLK
+SGGGGGGGGGGGGGLK
+SLLLLLLLLLLLLLLK
+KKKKKKKKKKKKKKKK
+`);
+
+export const bush = sprite({ L: 'lime', G: 'green', F: 'forest', K: 'deep' }, `
+................
+......KKKK......
+....KKLLLGKK....
+...KLLLLLLGGK...
+..KLLLLLLLLLGK..
+.KLLLLLLLGLLGGK.
+KLLGLLLLLLLLLGGK
+KLLLLLLLGLLLLGFK
+`);
+
+export const flower = sprite({ W: 'white', Y: 'yellow', R: 'hot', G: 'green', L: 'lime' }, `
+................
+................
+................
+.....RR.........
+....RYYR........
+....RYYR........
+.....RR.........
+.....G..........
+...L.G.L........
+....LGL.........
+`);
+
+// Pipe pieces, 32 px wide: a lip and a body slice repeated down.
+export const pipeLip = sprite({ K: 'ink', W: 'white', L: 'lime', G: 'green', F: 'forest' }, `
+KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+KWLLLLLLLLLLLLLLLLLLLGGGGGGGGGFK
+KWLLLLLLLLLLLLLLLLLLLGGGGGGGGGFK
+KWLLLLLLLLLLLLLLLLLLLGGGGGGGGGFK
+KWLLLLLLLLLLLLLLLLLLLGGGGGGGGGFK
+KWLLLLLLLLLLLLLLLLLLLGGGGGGGGGFK
+KWLLLLLLLLLLLLLLLLLLLGGGGGGGGGFK
+KLLLLLLLLLLLLLLLLLLLLGGGGGGGGGFK
+KFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFK
+KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+`);
+
+export const pipeBody = sprite({ K: 'ink', W: 'white', L: 'lime', G: 'green', F: 'forest' }, `
+..KWLLLLLLLLLLLLLLLLGGGGGGGGFK..
+`);
+
+export const SOLID = {
+  '#': { friction: 0.6, restitution: 0.1 },
+  B: { friction: 0.5, restitution: 0.2 },
+  H: { friction: 0.5, restitution: 0.35 },
+  S: { friction: 0.6, restitution: 0.1 },
+};
+
+export const DECOR = { b: bush, f: flower };

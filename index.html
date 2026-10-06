@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- yeet2waifu © 2026 Haru (@haru717171x). All rights reserved. Free to play on stream; see LICENSE. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="copyright" content="© 2026 Haru (@haru717171x). All rights reserved.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>yeet2waifu: who gets the waifu?</title>
+  <meta name="description" content="A free catapult game for your Twitch chat. They type !yeet, they fly, the best shot gets the waifu.">
+  <meta property="og:title" content="yeet2waifu: who gets the waifu?">
+  <meta property="og:description" content="A free catapult game for your Twitch chat. They type !yeet, they fly, the best shot gets the waifu.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://haruwelkins.github.io/yeet2waifu/">
+  <meta property="og:image" content="https://haruwelkins.github.io/yeet2waifu/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="yeet2waifu: a chat full of chibis flying out of a catapult over a pixel art shrine">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@haru717171x">
+  <meta name="twitter:title" content="yeet2waifu: who gets the waifu?">
+  <meta name="twitter:description" content="A free catapult game for your Twitch chat. They type !yeet, they fly, the best shot gets the waifu.">
+  <meta name="twitter:image" content="https://haruwelkins.github.io/yeet2waifu/og.png">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <script>
+    // Links made before this page existed (OBS sources with ?channel=...) go straight to the game.
+    if (/[?&](channel|demo|manual|auto)=/.test(location.search)) location.replace('play.html' + location.search);
+  </script>
+  <link rel="stylesheet" href="src/ui.css">
+</head>
+<body>
+  <header class="titlebar raised">
+    <canvas class="app-icon" id="appIcon" width="16" height="16" aria-hidden="true"></canvas>
+    <h1 class="app-name">yeet2waifu</h1>
+    <span class="app-ask" data-t="ask"></span>
+    <span class="grow"></span>
+    <div class="bset ui-lang cut" role="group" aria-label="Language / Idioma">
+      <button type="button" class="btn raised" data-ui-lang="en">English</button>
+      <button type="button" class="btn raised" data-ui-lang="es">Español</button>
+    </div>
+    <a class="credit cut" href="https://x.com/haru717171x" target="_blank" rel="noopener">yeet2waifu <b>by:@haru717171x</b></a>
+  </header>
+  <nav class="doctabs" aria-label="Pages">
+    <a class="doctab" href="./" aria-current="page" data-t="navSetup"></a>
+    <a class="doctab" href="draw.html"><span data-t="navDraw"></span><span class="new" data-t="newBadge"></span></a>
+  </nav>
+
+  <main class="layout">
+    <section class="workspace" aria-label="Preview">
+      <p class="intro" data-t="tagline"></p>
+      <div class="frame"><iframe id="preview" title="Game preview" allow="autoplay"></iframe></div>
+      <div class="canvas-bar">
+        <span id="previewNote"></span>
+        <label class="check"><input type="checkbox" id="previewSound"><span class="box"></span><span data-t="previewSound"></span></label>
+      </div>
+
+      <div class="panel help">
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab raised" role="tab" id="t-obs" aria-controls="p-obs" data-t="tabObs"></button>
+          <button type="button" class="tab raised" role="tab" id="t-cmds" aria-controls="p-cmds" data-t="tabCmds"></button>
+          <button type="button" class="tab raised" role="tab" id="t-keys" aria-controls="p-keys" data-t="tabKeys"></button>
+        </div>
+        <div class="raised">
+          <div class="tabpanel" role="tabpanel" id="p-obs" aria-labelledby="t-obs"></div>
+          <div class="tabpanel" role="tabpanel" id="p-cmds" aria-labelledby="t-cmds" hidden></div>
+          <div class="tabpanel" role="tabpanel" id="p-keys" aria-labelledby="t-keys" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel props raised" aria-label="Setup">
+      <div class="panel-title"><span data-t="propsTitle"></span><span class="app-ask" data-t="propsHint"></span></div>
+      <div class="props-body" id="options"></div>
+      <div class="props-foot">
+        <div class="lbl"><span data-t="linkTitle"></span></div>
+        <div class="link sunken" id="link" aria-live="polite"></div>
+        <div class="foot-row">
+          <a id="openTab" target="_blank" rel="noopener" data-t="openTab"></a>
+          <button type="button" class="btn btn-go raised cut" id="copy"><span class="ico" aria-hidden="true"></span><span id="copyText"></span></button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="statusbar raised">
+    <span class="st"><span class="dot" id="statusDot"></span><span id="statusText"></span></span>
+    <span class="grow"></span>
+    <span data-t="footFree"></span>
+    <a href="https://github.com/haruwelkins/yeet2waifu" target="_blank" rel="noopener" data-t="footCode"></a>
+    <a href="https://github.com/haruwelkins/yeet2waifu/blob/main/LICENSE" target="_blank" rel="noopener">© 2026 Haru</a>
+    <span class="ver" id="version"></span>
+  </footer>
+
+  <script type="module" src="src/setup.js"></script>
+</body>
+</html>

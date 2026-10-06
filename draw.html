@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- yeet2waifu © 2026 Haru (@haru717171x). All rights reserved. Free to play on stream; see LICENSE. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="copyright" content="© 2026 Haru (@haru717171x). All rights reserved.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>yeet2waifu: draw your waifu</title>
+  <meta name="description" content="Draw a 32×32 waifu for yeet2waifu, the free catapult game for Twitch chats, and get her code.">
+  <meta property="og:title" content="yeet2waifu: draw your waifu">
+  <meta property="og:description" content="Draw a 32×32 waifu for yeet2waifu, the free catapult game for Twitch chats, and get her code.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://haruwelkins.github.io/yeet2waifu/draw.html">
+  <meta property="og:image" content="https://haruwelkins.github.io/yeet2waifu/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@haru717171x">
+  <meta name="twitter:image" content="https://haruwelkins.github.io/yeet2waifu/og.png">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <link rel="stylesheet" href="src/ui.css">
+</head>
+<body>
+  <header class="titlebar raised">
+    <canvas class="app-icon" id="appIcon" width="16" height="16" aria-hidden="true"></canvas>
+    <h1 class="app-name">yeet2waifu</h1>
+    <span class="app-ask" data-t="ask"></span>
+    <span class="grow"></span>
+    <div class="bset ui-lang cut" role="group" aria-label="Language / Idioma">
+      <button type="button" class="btn raised" data-ui-lang="en">English</button>
+      <button type="button" class="btn raised" data-ui-lang="es">Español</button>
+    </div>
+    <a class="credit cut" href="https://x.com/haru717171x" target="_blank" rel="noopener">yeet2waifu <b>by:@haru717171x</b></a>
+  </header>
+  <nav class="doctabs" aria-label="Pages">
+    <a class="doctab" href="./" data-t="navSetup"></a>
+    <a class="doctab" href="draw.html" aria-current="page" data-t="navDraw"></a>
+  </nav>
+
+  <main class="studio">
+    <div class="colorbar raised" id="colorbar" role="group" aria-label="Palette"></div>
+    <div class="toolbar raised" id="toolbar" role="toolbar" aria-label="Tools"></div>
+
+    <section class="stage" id="stage" aria-label="Canvas">
+      <div class="art-wrap" id="artWrap">
+        <canvas id="guide" width="32" height="32" aria-hidden="true"></canvas>
+        <canvas id="art" width="32" height="32" aria-hidden="true"></canvas>
+        <canvas id="over" aria-label="32 by 32 canvas"></canvas>
+      </div>
+    </section>
+
+    <aside class="panel props raised" aria-label="Your waifu">
+      <div class="panel-title"><span data-t="propsTitle"></span><span class="app-ask" data-t="propsHint"></span></div>
+      <div class="props-body" id="options"></div>
+      <div class="props-foot">
+        <div class="lbl"><span data-t="codeTitle"></span><span class="app-ask" id="codeLen"></span></div>
+        <div class="code-out sunken" id="codeOut" aria-live="polite"></div>
+        <div class="foot-row">
+          <button type="button" class="btn raised cut" id="copyCode"></button>
+          <button type="button" class="btn btn-go raised cut" id="useHer"></button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="statusbar raised">
+    <span id="stPos" style="min-width: 110px"></span>
+    <span class="st"><span class="dot" id="stChip"></span><span id="stColor"></span></span>
+    <span id="stTool"></span>
+    <span class="grow"></span>
+    <span id="stHint"></span>
+    <a href="https://github.com/haruwelkins/yeet2waifu/blob/main/LICENSE" target="_blank" rel="noopener">© 2026 Haru</a>
+    <span class="ver" id="version"></span>
+  </footer>
+
+  <script type="module" src="src/draw.js"></script>
+</body>
+</html>

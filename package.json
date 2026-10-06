@@ -1,0 +1,16 @@
+{
+  "name": "yeet2waifu",
+  "version": "1.1.0",
+  "description": "Who gets the waifu? A chat-powered catapult game for Twitch streams.",
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "medir": "node tools/medir_mapas.mjs"
+  },
+  "author": "Haru",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "devDependencies": {
+    "planck": "^1.5.0"
+  },
+  "private": true
+}
